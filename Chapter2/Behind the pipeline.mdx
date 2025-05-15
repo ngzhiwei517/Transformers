@@ -1,10 +1,10 @@
-<FrameworkSwitchCourse {fw} />
+
 
 # Behind the pipeline[[behind-the-pipeline]]
 
 
 
-Let's start with a complete example, taking a look at what happened behind the scenes when we executed the following code in [Chapter 1](/course/chapter1):
+Let's start with a complete example, taking a look at what happened behind the scenes when we executed the following code in Chapter 1:
 
 ```python
 from transformers import pipeline
@@ -25,7 +25,7 @@ and obtained:
  {'label': 'NEGATIVE', 'score': 0.9994558095932007}]
 ```
 
-As we saw in [Chapter 1](/course/chapter1), this pipeline groups together three steps: preprocessing, passing the inputs through the model, and postprocessing:
+As we saw in Chapter 1, this pipeline groups together three steps: preprocessing, passing the inputs through the model, and postprocessing:
 
 <div class="flex justify-center">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter2/full_nlp_pipeline.svg" alt="The full NLP pipeline: tokenization of text, conversion to IDs, and inference through the Transformer model and the model head."/>

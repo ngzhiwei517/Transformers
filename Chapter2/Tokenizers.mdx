@@ -141,7 +141,7 @@ Saving a tokenizer is identical to saving a model:
 tokenizer.save_pretrained("directory_on_my_computer")
 ```
 
-We'll talk more about `token_type_ids` in [Chapter 3](/course/chapter3), and we'll explain the `attention_mask` key a little later. First, let's see how the `input_ids` are generated. To do this, we'll need to look at the intermediate methods of the tokenizer.
+We'll talk more about `token_type_ids` in Chapter 3, and we'll explain the `attention_mask` key a little later. First, let's see how the `input_ids` are generated. To do this, we'll need to look at the intermediate methods of the tokenizer.
 
 ## Encoding
 
@@ -177,7 +177,7 @@ The output of this method is a list of strings, or tokens:
 
 This tokenizer is a subword tokenizer: it splits the words until it obtains tokens that can be represented by its vocabulary. That's the case here with `transformer`, which is split into two tokens: `transform` and `##er`.
 
-### From tokens to input IDs[[from-tokens-to-input-ids]]
+### From tokens to input IDs
 
 The conversion to input IDs is handled by the `convert_tokens_to_ids()` tokenizer method:
 
@@ -199,7 +199,7 @@ These outputs, once converted to the appropriate framework tensor, can then be u
 
 </Tip>
 
-## Decoding[[decoding]]
+## Decoding
 
 *Decoding* is going the other way around: from vocabulary indices, we want to get a string. This can be done with the `decode()` method as follows:
 

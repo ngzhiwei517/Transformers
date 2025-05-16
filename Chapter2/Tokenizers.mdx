@@ -1,28 +1,7 @@
-<FrameworkSwitchCourse {fw} />
+
 
 # Tokenizers[[tokenizers]]
 
-{#if fw === 'pt'}
-
-<CourseFloatingBanner chapter={2}
-  classNames="absolute z-10 right-0 top-0"
-  notebooks={[
-    {label: "Google Colab", value: "https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/en/chapter2/section4_pt.ipynb"},
-    {label: "Aws Studio", value: "https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/course/en/chapter2/section4_pt.ipynb"},
-]} />
-
-{:else}
-
-<CourseFloatingBanner chapter={2}
-  classNames="absolute z-10 right-0 top-0"
-  notebooks={[
-    {label: "Google Colab", value: "https://colab.research.google.com/github/huggingface/notebooks/blob/master/course/en/chapter2/section4_tf.ipynb"},
-    {label: "Aws Studio", value: "https://studiolab.sagemaker.aws/import/github/huggingface/notebooks/blob/master/course/en/chapter2/section4_tf.ipynb"},
-]} />
-
-{/if}
-
-<Youtube id="VFp38yj8h3A"/>
 
 Tokenizers are one of the core components of the NLP pipeline. They serve one purpose: to translate text into data that can be processed by the model. Models can only process numbers, so tokenizers need to convert our text inputs to numerical data. In this section, we'll explore exactly what happens in the tokenization pipeline. 
 
@@ -38,7 +17,7 @@ Let's take a look at some examples of tokenization algorithms, and try to answer
 
 ## Word-based[[word-based]]
 
-<Youtube id="nhJxYji1aho"/>
+
 
 The first type of tokenizer that comes to mind is _word-based_. It's generally very easy to set up and use with only a few rules, and it often yields decent results. For example, in the image below, the goal is to split the raw text into words and find a numerical representation for each of them:
 

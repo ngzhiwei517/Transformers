@@ -191,6 +191,15 @@ print(ids)
 [7993, 170, 11303, 1200, 2443, 1110, 3014]
 ```
 
+The decode method is useful because models typically output sequences of token IDs (numerical indices), not human-readable text. The decode method:
+
+-Converts token indices back into their corresponding text tokens.
+-Merges subword tokens back into complete words (e.g., "▁Hello", "▁world" → "Hello world").
+-Handles formatting to produce a fluent, readable sentence.
+
+
+
+
 These outputs, once converted to the appropriate framework tensor, can then be used as inputs to a model as seen earlier in this chapter.
 
 <Tip>

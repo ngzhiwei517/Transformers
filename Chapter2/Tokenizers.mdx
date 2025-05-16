@@ -1,6 +1,6 @@
 
 
-# Tokenizers[[tokenizers]]
+# Tokenizers
 
 
 Tokenizers are one of the core components of the NLP pipeline. They serve one purpose: to translate text into data that can be processed by the model. Models can only process numbers, so tokenizers need to convert our text inputs to numerical data. In this section, we'll explore exactly what happens in the tokenization pipeline. 
@@ -15,7 +15,7 @@ However, models can only process numbers, so we need to find a way to convert th
 
 Let's take a look at some examples of tokenization algorithms, and try to answer some of the questions you may have about tokenization.
 
-## Word-based[[word-based]]
+## Word-based
 
 
 
@@ -47,9 +47,8 @@ Finally, we need a custom token to represent words that are not in our vocabular
 
 One way to reduce the amount of unknown tokens is to go one level deeper, using a _character-based_ tokenizer.
 
-## Character-based[[character-based]]
+## Character-based
 
-<Youtube id="ssLq_EK2jLE"/>
 
 Character-based tokenizers split the text into characters, rather than words. This has two primary benefits:
 
@@ -69,9 +68,9 @@ Another thing to consider is that we'll end up with a very large amount of token
 
 To get the best of both worlds, we can use a third technique that combines the two approaches: *subword tokenization*.
 
-## Subword tokenization[[subword-tokenization]]
+## Subword tokenization
 
-<Youtube id="zHvTiHr506c"/>
+
 
 Subword tokenization algorithms rely on the principle that frequently used words should not be split into smaller subwords, but rare words should be decomposed into meaningful subwords.
 
@@ -88,7 +87,7 @@ These subwords end up providing a lot of semantic meaning: for instance, in the 
 
 This approach is especially useful in agglutinative languages such as Turkish, where you can form (almost) arbitrarily long complex words by stringing together subwords.
 
-### And more![[and-more]]
+### And more!
 
 Unsurprisingly, there are many more techniques out there. To name a few:
 
@@ -98,7 +97,7 @@ Unsurprisingly, there are many more techniques out there. To name a few:
 
 You should now have sufficient knowledge of how tokenizers work to get started with the API.
 
-## Loading and saving[[loading-and-saving]]
+## Loading and saving
 
 Loading and saving tokenizers is as simple as it is with models. Actually, it's based on the same two methods: `from_pretrained()` and `save_pretrained()`. These methods will load or save the algorithm used by the tokenizer (a bit like the *architecture* of the model) as well as its vocabulary (a bit like the *weights* of the model).
 
@@ -144,9 +143,8 @@ tokenizer.save_pretrained("directory_on_my_computer")
 
 We'll talk more about `token_type_ids` in [Chapter 3](/course/chapter3), and we'll explain the `attention_mask` key a little later. First, let's see how the `input_ids` are generated. To do this, we'll need to look at the intermediate methods of the tokenizer.
 
-## Encoding[[encoding]]
+## Encoding
 
-<Youtube id="Yffk5aydLzg"/>
 
 Translating text to numbers is known as _encoding_. Encoding is done in a two-step process: the tokenization, followed by the conversion to input IDs.
 
@@ -156,7 +154,7 @@ The second step is to convert those tokens into numbers, so we can build a tenso
 
 To get a better understanding of the two steps, we'll explore them separately. Note that we will use some methods that perform parts of the tokenization pipeline separately to show you the intermediate results of those steps, but in practice, you should call the tokenizer directly on your inputs (as shown in the section 2).
 
-### Tokenization[[tokenization]]
+### Tokenization
 
 The tokenization process is done by the `tokenize()` method of the tokenizer:
 
